@@ -19,6 +19,37 @@ Community contributed layouts.
 
 `import "fyne.io/x/fyne/layout"`
 
+### Align
+
+Allow to align a CanvasObject vertically and horizontally in its container while shrinking to MinSize
+
+```go
+
+```
+todo image
+
+### CustomMinSize
+
+This layout is not very useful by itself.
+but in most cases it's not recommended to use it aaaaaaaaaaaaaaon elements, but together with another layout like Stack
+
+It allows you to set a MinSize to a CanvasObject
+
+```go
+entry := widget.NewEntry()
+// make an entry that is at least 200 units wide and with the entry's min height 
+contained := NewSetMinSize(entry, 200, 0)
+```
+
+### Stack
+
+A stack is a list of containers arranged horizontally, like a HBox, but with equal space allocated to each element while growing as needed with padding between the elements.
+but once its scaled horizontally down so that the size allocated breaches the min width of the widest element, 
+it will transition to be arranged vertically like a VBox.
+unlike the AdaptiveGridLayout it is not locked to the device orienation
+
+### AdvancedWrap
+
 ## Widgets
 
 Community contributed widgets.
